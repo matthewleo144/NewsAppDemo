@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="Brown">#964B00</color>
+    <color name="red">#4A0904</color>
+    <color name="darkblue">#1B337B</color>
+    <color name="active">#aa7711</color>
+    <color name="empty">#00AA1111</color>
+    <color name="active_tab_color">#FFEB3B</color>
+    <color name="inactive_tab_color">#9C27B0</color>
+
+</resources>
