@@ -2,11 +2,9 @@ package com.example.newsappdemo.ui.fragments
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.webkit.WebViewClient
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.example.newsappdemo.R
 import com.example.newsappdemo.databinding.FragmentArticleBinding
@@ -36,7 +34,7 @@ class ArticleFragment : Fragment(R.layout.fragment_article) {
                newsViewModel.addToFavourites(article)
            }
 
-            Snackbar.make(view,"Added too favourites", Snackbar.LENGTH_LONG).show()
+            Snackbar.make(view,"Saved", Snackbar.LENGTH_LONG).show()
         }
     }
 }

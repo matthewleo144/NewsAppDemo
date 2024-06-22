@@ -1,12 +1,8 @@
 package com.example.newsappdemo.ui.fragments
 
-import android.media.RouteListingPreference.Item
-import android.os.Binder
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
@@ -47,7 +43,7 @@ class FavoritesFragment : Fragment(R.layout.fragment_favorites){
                 val position=viewHolder.adapterPosition
                 val article=newsAdapter.differ.currentList[position]
                 newsViewModel.deleteArticle(article)
-                Snackbar.make(view,"Remove from favourites",Snackbar.LENGTH_LONG).apply {
+                Snackbar.make(view,"Remove from Saved News",Snackbar.LENGTH_LONG).apply {
                     setAction("Undo"){
                         newsViewModel.addToFavourites(article)
                     }
