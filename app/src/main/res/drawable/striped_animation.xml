@@ -1,0 +1,7 @@
+<!-- res/anim/striped_translate_animation.xml -->
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromXDelta="-100%"
+    android:toXDelta="0%"
+    android:duration="1000"
+    android:repeatCount="infinite"
+    android:interpolator="@android:anim/linear_interpolator" />

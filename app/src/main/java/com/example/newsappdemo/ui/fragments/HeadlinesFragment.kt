@@ -2,18 +2,15 @@ package com.example.newsappdemo.ui.fragments
 
 import android.content.Context
 import android.os.Bundle
-import android.os.Message
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.AbsListView
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
-import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -47,7 +44,7 @@ class HeadlinesFragment : Fragment(R.layout.fragment_headlines) {
         newsViewModel=(activity as NewsActivity).newsViewModel
 
         setupHeadlinesRecycler()
-        newsAdapter.onItemClickListener1 {
+        newsAdapter.onItemClickListener {
             Log.d("Err","Enter in On item click listener")
             val bundle = Bundle().apply {
               //  Log.i("Err","Enter in On item click listener bundle")

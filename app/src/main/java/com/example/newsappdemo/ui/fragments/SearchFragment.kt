@@ -2,34 +2,28 @@ package com.example.newsappdemo.ui.fragments
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.AbsListView
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.core.widget.addTextChangedListener
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsappdemo.R
 import com.example.newsappdemo.adapters.NewsAdapter
-import com.example.newsappdemo.databinding.FragmentHeadlinesBinding
 import com.example.newsappdemo.databinding.FragmentSearchBinding
 import com.example.newsappdemo.ui.NewsActivity
 import com.example.newsappdemo.ui.NewsViewModel
 import com.example.newsappdemo.util.Constants
-import com.example.newsappdemo.util.Constants.Companion.SEARCH_NEWS_TIME_DELAY
 import com.example.newsappdemo.util.Resource
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.MainScope
-
 import kotlinx.coroutines.launch
 
 class SearchFragment : Fragment(R.layout.fragment_search) {
@@ -50,7 +44,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
         errorText=view.findViewById(R.id.errorText)
         newsViewModel=(activity as NewsActivity).newsViewModel
         setUpSearchRecycler()
-        newsAdapter.onItemClickListener1{
+        newsAdapter.onItemClickListener{
             val bundle=Bundle().apply {
                 putSerializable("article",it)
             }

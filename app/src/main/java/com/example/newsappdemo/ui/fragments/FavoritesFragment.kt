@@ -24,7 +24,7 @@ class FavoritesFragment : Fragment(R.layout.fragment_favorites){
         binding=FragmentFavoritesBinding.bind(view)
         newsViewModel=(activity as NewsActivity).newsViewModel
         setupFavouritesRecycler()
-        newsAdapter.onItemClickListener1 {
+        newsAdapter.onItemClickListener {
             val bundle= Bundle().apply{
                 putSerializable("article",it)
         }

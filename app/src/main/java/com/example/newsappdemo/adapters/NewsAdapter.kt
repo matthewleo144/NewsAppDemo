@@ -1,6 +1,5 @@
 package com.example.newsappdemo.adapters
 
-import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.newsappdemo.R
 import com.example.newsappdemo.models.Article
-import com.example.newsappdemo.models.Source
 
 class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
     inner class ArticleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
@@ -65,7 +63,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
 
         }
     }
-    fun onItemClickListener1(listener:(Article)->Unit){
+    fun onItemClickListener(listener:(Article)->Unit){
         onItemClickListener=listener
     }
 }
